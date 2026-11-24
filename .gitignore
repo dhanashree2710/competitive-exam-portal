@@ -1,5 +1,5 @@
-# local secrets – never commit
-js/config.js
+# real secrets – never commit (the Groq key file and any .env)
+# js/config.js IS committed: it only holds the Supabase URL + anon key, which are public by design
 sql/*.local.sql
 .env
 .env.*

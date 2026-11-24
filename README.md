@@ -25,7 +25,7 @@ HTML + JavaScript + Bootstrap 5 website. **Supabase is the whole backend.** Ther
 | Supabase service-role key | Not used anywhere | ❌ |
 | Supabase anon key | `js/config.js` | ✅ It's Supabase's *public* key. Every table is locked, so it can only call the `api()` function, which checks your login first. |
 
-`js/config.js` and `sql/*.local.sql` are in `.gitignore`. After cloning on another machine, copy `js/config.example.js` to `js/config.js` and fill it in. If your host deploys straight from Git, upload `js/config.js` there yourself. Committing it is also safe, because the anon key is public by design.
+`js/config.js` is **committed with the site**, so Git-based hosting (GitHub Pages, Netlify, Vercel, cPanel Git) gets it automatically. It holds only the Supabase URL and the public anon key. The real secrets stay out of Git: `sql/*.local.sql` (Groq key) and `.env` are in `.gitignore`. The Groq key lives only inside the database.
 
 ## How it is built
 
@@ -272,7 +272,7 @@ It should return **3.2**. If it errors or returns an older number, paste the who
 | "The database isn't set up yet…" | Run `sql/01_setup_all.sql` in the SQL Editor. |
 | "The app's connection key was rejected…" | Check `SUPABASE_ANON_KEY` in `js/config.js` (Supabase → Project Settings → API). |
 | "Couldn't connect to the server…" | Check your internet connection and `SUPABASE_URL` in `js/config.js`. |
-| "This website isn't linked to the exam server yet…" | `js/config.js` is missing on the server. Upload it from this zip (or copy `config.example.js` to `config.js` and fill it in). |
+| "This website isn't linked to the exam server yet…" | `js/config.js` is missing on the server. Open `https://your-site/js/config.js` in the browser: if it shows "Not found", upload that file into the site's `js` folder. If you deploy through GitHub, make sure the file is committed (older versions of this project listed it in `.gitignore`). |
 | "AI needs the http database extension…" | Enable **http** under Database → Extensions, then run the setup SQL again. |
 | "AI features are not set up yet…" | Super Admin → Settings → add the Groq key. |
 | "File storage isn't set up…" | Run the setup SQL again (it creates the private `uploads` bucket). |
