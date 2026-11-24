@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Verify scorecard</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="auth-form-wrap" style="min-height:100vh">
+    <div class="card auth-card" style="max-width:460px"><div class="card-body p-4 text-center" id="box"><div class="loader-ring mx-auto my-4"></div>Verifying…</div></div>
+  </div>
+  <script src="js/config.js"></script>
+  <script src="js/api.js"></script>
+  <script>
+    (async function () {
+      const q = new URLSearchParams(location.search), box = document.getElementById("box");
+      const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+      try {
+        const r = await API.call("result.verify", { id: q.get("id"), code: q.get("code") }, { noRedirect: true });
+        if (!r.valid) { box.innerHTML = `<div class="display-4 text-danger mb-2"><i class="bi bi-x-octagon"></i></div><h4 class="fw-bold">Not verified</h4><p class="text-secondary mb-0">This scorecard could not be verified. It may be altered, or the result is not published.</p>`; return; }
+        const x = r.result;
+        box.innerHTML = `<div class="display-4 text-success mb-2" style="animation:pop .6s both"><i class="bi bi-patch-check-fill"></i></div><h4 class="fw-bold">Verified scorecard</h4>
+          <p class="text-secondary">${esc(x.organization || "")}</p>
+          <table class="table text-start small mb-0"><tr><th>Student</th><td>${esc(x.student)}${x.roll_number ? " (" + esc(x.roll_number) + ")" : ""}</td></tr>
+          <tr><th>Exam</th><td>${esc(x.exam)}</td></tr><tr><th>Score</th><td>${esc(x.score)} / ${esc(x.max)} (${esc(x.percentage)}%)</td></tr>
+          <tr><th>Rank</th><td>${esc(x.rank ?? "—")}</td></tr><tr><th>Date</th><td>${new Date(x.date).toLocaleDateString("en-IN", { day: "2-digit", month: "short", year: "numeric" })}</td></tr></table>`;
+      } catch (e) { box.innerHTML = `<div class="display-4 text-warning mb-2"><i class="bi bi-exclamation-triangle"></i></div><p>${esc(e.message)}</p>`; }
+    })();
+  </script>
+</body>
+</html>

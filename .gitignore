@@ -1,0 +1,10 @@
+# local secrets – never commit
+js/config.js
+sql/*.local.sql
+.env
+.env.*
+# misc
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
