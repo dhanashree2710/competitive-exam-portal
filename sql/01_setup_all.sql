@@ -3068,7 +3068,7 @@ begin
   if u.role <> 'student' and not private.in_scope(s, st.organization_id) then perform private.fail('You don''t have permission to do this.', '403'); end if;
   r := private.student_row(st.id);
   return jsonb_build_object('student', r,
-    'results', coalesce((select jsonb_agg(jsonb_build_object('exam_id', e.id, 'title', e.title, 'score', x.total_score, 'max', x.max_score, 'percentage', x.percentage,
+    'results', coalesce((select jsonb_agg(jsonb_build_object('id', x.id, 'exam_id', e.id, 'title', e.title, 'score', x.total_score, 'max', x.max_score, 'percentage', x.percentage,
                     'rank', x.rank, 'date', x.created_at) order by x.created_at desc) from results x join exams e on e.id = x.exam_id where x.user_id = st.id and (x.is_visible or u.role <> 'student')), '[]'),
     'assignments', coalesce((select jsonb_agg(jsonb_build_object('title', a.title, 'status', z.status, 'marks', z.marks_obtained, 'max', a.max_marks, 'submitted_at', z.submitted_at)
                     order by z.submitted_at desc) from assignment_submissions z join assignments a on a.id = z.assignment_id where z.user_id = st.id), '[]'),
@@ -3720,4 +3720,4 @@ insert into private.settings(key, value) values ('groq_model', 'openai/gpt-oss-1
 
 notify pgrst, 'reload schema';
 notify pgrst, 'reload config';
-select 'KDRT ExamSphere backend installed successfully' as status;
+select 'VidyaSetu backend installed successfully' as status;

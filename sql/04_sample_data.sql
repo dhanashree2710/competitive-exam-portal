@@ -1,5 +1,5 @@
 -- =====================================================================
---  KDRT ExamSphere – INSTITUTE DATA for Sujata Institute of Information And Technology (SIIT03)
+--  VidyaSetu – INSTITUTE DATA for Sujata Institute of Information And Technology (SIIT03)
 --  Run AFTER sql/01_setup_all.sql (Supabase → SQL Editor → paste → Run).
 --  Safe to run more than once: nothing is duplicated.
 --
@@ -417,9 +417,9 @@ begin
    where es.user_id = x.id and x.last_at is not null;
 
   -- ---------- announcements ----------
-  if not exists (select 1 from public.announcements where title = 'Welcome to KDRT ExamSphere') then
+  if not exists (select 1 from public.announcements where title = 'Welcome to VidyaSetu') then
     insert into public.announcements(organization_id, title, body, target_type, priority, created_by, published_at)
-    values (root, 'Welcome to KDRT ExamSphere', E'Your exams, assignments, results and study plan are now in one place.\nOpen "My Progress & Plan" to see your strengths, weak topics and a 7-day study plan.', 'all', 'normal', sa, now() - interval '20 days');
+    values (root, 'Welcome to VidyaSetu', E'Your exams, assignments, results and study plan are now in one place.\nOpen "My Progress & Plan" to see your strengths, weak topics and a 7-day study plan.', 'all', 'normal', sa, now() - interval '20 days');
   end if;
   if not exists (select 1 from public.announcements where title = 'JEE Main Mock Test 2 is now live') then
     insert into public.announcements(organization_id, title, body, target_type, target_batch, priority, created_by, published_at)

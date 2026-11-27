@@ -110,7 +110,7 @@ window.Exporter = (function () {
       const W = doc.internal.pageSize.getWidth();
       doc.setFillColor(79, 70, 229); doc.rect(0, 0, W, 96, "F");
       doc.setTextColor(255); doc.setFont("times", "bold"); doc.setFontSize(22); doc.text("SCORECARD", 40, 46);
-      doc.setFont("times", "normal"); doc.setFontSize(12); doc.text(`${r.organization?.name || (window.APP_CONFIG || {}).APP_NAME || "KDRT ExamSphere"}`, 40, 70);
+      doc.setFont("times", "normal"); doc.setFontSize(12); doc.text(`${r.organization?.name || (window.APP_CONFIG || {}).APP_NAME || "VidyaSetu"}`, 40, 70);
       doc.setTextColor(30); doc.setFont("times", "bold"); doc.setFontSize(16); doc.text(r.exam?.title || "Exam", 40, 132);
       doc.setFont("times", "normal"); doc.setFontSize(12);
       const info = [["Student", r.user?.full_name || ""], ["Roll number", r.user?.roll_number || "—"], ["Email", r.user?.email || "—"],

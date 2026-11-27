@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 128" role="img" aria-label="VidyaSetu – Bridge to Knowledge">
+  <title>VidyaSetu – Bridge to Knowledge</title>
+  <defs>
+    <linearGradient id="vsBg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0F1E3D"/><stop offset=".6" stop-color="#1E40AF"/><stop offset="1" stop-color="#2563EB"/></linearGradient>
+    <linearGradient id="vsArch" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#F97316"/><stop offset="1" stop-color="#F59E0B"/></linearGradient>
+    <radialGradient id="vsGlow" cx=".5" cy=".3" r=".6"><stop offset="0" stop-color="#F97316" stop-opacity=".35"/><stop offset="1" stop-color="#F97316" stop-opacity="0"/></radialGradient>
+  </defs>
+  <g>
+    <rect width="128" height="128" rx="30" fill="url(#vsBg)"/><rect width="128" height="128" rx="30" fill="url(#vsGlow)"/>
+    <path d="M64 15 L67.6 25.4 L78 29 L67.6 32.6 L64 43 L60.4 32.6 L50 29 L60.4 25.4 Z" fill="#FDBA74"/>
+    <path d="M20 78 Q64 22 108 78" fill="none" stroke="url(#vsArch)" stroke-width="9" stroke-linecap="round"/>
+    <g stroke="#FDBA74" stroke-width="3" stroke-linecap="round" opacity=".9"><line x1="42" y1="56" x2="42" y2="76"/><line x1="64" y1="49" x2="64" y2="76"/><line x1="86" y1="56" x2="86" y2="76"/></g>
+    <path d="M14 80 C30 74 48 75 64 84 C80 75 98 74 114 80 L114 100 C98 94 80 95 64 104 C48 95 30 94 14 100 Z" fill="#FFFFFF"/>
+    <path d="M64 84 L64 104" stroke="#BFDBFE" stroke-width="2.5"/>
+    <path d="M22 86 C34 82 46 83 56 88 M22 93 C34 89 46 90 56 95 M72 88 C82 83 94 82 106 86 M72 95 C82 90 94 89 106 93" stroke="#93C5FD" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+  <text x="150" y="78" font-family="'Times New Roman', Times, serif" font-size="64" font-weight="700" letter-spacing="-.5"><tspan fill="#0F1E3D">Vidya</tspan><tspan fill="#F97316">Setu</tspan></text>
+  <text x="153" y="108" font-family="'Times New Roman', Times, serif" font-size="19" letter-spacing="4.2" fill="#2563EB">BRIDGE TO KNOWLEDGE</text>
+</svg>

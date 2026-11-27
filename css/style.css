@@ -410,7 +410,7 @@ body { background: var(--ep-bg) !important; }
 .dg-body .nav-link { display: flex !important; width: auto !important; }
 
 /* =====================================================================
-   v4: KDRT ExamSphere – official palette (Academic Indigo)
+   v4: VidyaSetu – official palette (Academic Indigo)
    Deep Navy #142B4A · Royal Blue #2563EB · Indigo #2563EB · Teal #0F766E · Amber #F59E0B
    ===================================================================== */
 :root {
@@ -553,7 +553,7 @@ a { color: var(--xs-blue); } a:hover { color: var(--xs-blue-hover); }
 @keyframes epspin { to { transform: rotate(360deg); } }
 
 /* =====================================================================
-   v6: KDRT ExamSphere – "Midnight Violet & Aqua"
+   v6: VidyaSetu – "Midnight Violet & Aqua"
    Midnight #0F1E3D · Indigo #2563EB · Violet #F97316 · Aqua #0EA5E9 · Amber #F59E0B · Rose #F43F5E
    ===================================================================== */
 :root {
@@ -757,7 +757,7 @@ img, svg, video { max-width: 100%; }
 .side-toggle { margin-right: 8px; flex-shrink: 0; }
 
 /* =====================================================================
-   v8: "ExamSphere Aurora" – eye-catching exam-portal redesign
+   v8: "VidyaSetu Aurora" – eye-catching exam-portal redesign
    ===================================================================== */
 :root { --rail: 78px; --side-open: 264px; --r-lg: 18px; --r-md: 14px;
   --aurora: radial-gradient(1100px 420px at 85% -120px, rgba(14,165,233,.16), transparent 60%), radial-gradient(900px 380px at 10% -140px, rgba(249,115,22,.14), transparent 60%);
@@ -1044,3 +1044,11 @@ body { background: var(--aurora), #F4F7FB !important; }
 .flow-step.next .go { color: #EA580C; }
 .flow-step:not(:last-child)::after { content: ""; position: absolute; right: -9px; top: 26px; width: 10px; height: 2px; background: #CBD5E1; }
 @media (max-width: 575.98px) { .flow-steps { grid-template-columns: 1fr 1fr; } .flow-step:not(:last-child)::after { display: none; } }
+
+/* ===== VidyaSetu brand ===== */
+.logo-img { background: none !important; box-shadow: none !important; padding: 0 !important; border: 0 !important; display: inline-grid !important; place-items: center; }
+.logo-img img { width: 100%; height: 100%; display: block; border-radius: 26%; }
+.app-sidebar .brand .logo-img { width: 38px !important; height: 38px !important; flex-shrink: 0; }
+.app-sidebar .brand .brand-text span, .splash h1 span, #appName span { color: #FDBA74; }
+.splash-logo.logo-img { width: 104px !important; height: 104px !important; filter: drop-shadow(0 16px 30px rgba(249,115,22,.40)); }
+.auth-logo.logo-img { width: 66px !important; height: 66px !important; filter: drop-shadow(0 10px 22px rgba(37,99,235,.35)); }

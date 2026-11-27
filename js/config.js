@@ -5,5 +5,5 @@
 window.APP_CONFIG = {
   SUPABASE_URL: "https://lgkxgcmkmoigbiswmexy.supabase.co",
   SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imxna3hnY21rbW9pZ2Jpc3dtZXh5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTUwNzQxMDYsImV4cCI6MjExMDY1MDEwNn0.M3NXtsto4-OvwrSVvz1J2k85m-fV2T5CUFSunmXMXzM",
-  APP_NAME: "KDRT ExamSphere"
+  APP_NAME: "VidyaSetu"
 };

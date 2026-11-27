@@ -144,7 +144,7 @@ App.init({ roles: App.STAFF }).then(async (user) => {
         <div class="tab-pane fade" id="st_4">
           <h6 class="mb-2">Exam results</h6>
           ${d.results.length ? `<div class="table-responsive mb-3"><table class="table table-sm"><thead><tr><th>Exam</th><th class="text-end">Marks</th><th class="text-end">%</th><th class="text-end">Rank</th><th>Date</th></tr></thead><tbody>
-            ${d.results.map((r) => `<tr><td><a href="result-view.html?exam=${r.exam_id}&user=${s.id}">${esc(r.title)}</a></td><td class="text-end">${r.score} / ${r.max}</td><td class="text-end">${r.percentage}%</td><td class="text-end">${r.rank ?? "—"}</td><td>${UI.fmtDate(r.date)}</td></tr>`).join("")}</tbody></table></div>`
+            ${d.results.map((r) => `<tr><td><a href="result-view.html?id=${r.id}">${esc(r.title)}</a></td><td class="text-end">${r.score} / ${r.max}</td><td class="text-end">${r.percentage}%</td><td class="text-end">${r.rank ?? "—"}</td><td>${UI.fmtDate(r.date)}</td></tr>`).join("")}</tbody></table></div>`
             : `<p class="text-secondary small">No exams taken yet.</p>`}
           <h6 class="mb-2">Assignments</h6>
           ${d.assignments.length ? `<div class="table-responsive"><table class="table table-sm"><thead><tr><th>Assignment</th><th>Status</th><th class="text-end">Marks</th><th>Submitted</th></tr></thead><tbody>

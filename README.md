@@ -1,4 +1,6 @@
-# KDRT ExamSphere – Competitive Examination Portal
+<p align="center"><img src="assets/logo.svg" alt="VidyaSetu – Bridge to Knowledge" width="420"></p>
+
+# VidyaSetu – Competitive Examination Portal
 
 HTML + JavaScript + Bootstrap 5 website. **Supabase is the whole backend.** There's no server code to deploy and no command line: you run one SQL file once, then open the website.
 
@@ -6,7 +8,7 @@ HTML + JavaScript + Bootstrap 5 website. **Supabase is the whole backend.** Ther
 
 1. **Supabase → Database → Extensions**: search **`http`** and enable it. The AI features need this.
 2. **Supabase → SQL Editor → New query**: paste the whole of **`sql/01_setup_all.sql`** and click **Run**.
-   You should see *"KDRT ExamSphere backend installed successfully"*. Your data is **not** deleted.
+   You should see *"VidyaSetu backend installed successfully"*. Your data is **not** deleted.
 3. **Groq key** (for AI). Choose one:
    * Sign in as Super Admin → **Settings** → paste the key → **Save** → **Test AI**, **or**
    * run `sql/04_set_groq_key.local.sql` in the SQL Editor (this file is git-ignored).
@@ -238,6 +240,10 @@ Where to find it in the portal:
   * Pop-up windows fill the screen on small phones.
 * **Tested:** every page for each role at 390 px (phone), 820 px (tablet) and 1400 px (desktop).
 
+## Brand
+
+**VidyaSetu** – “bridge of knowledge” (vidya = knowledge, setu = bridge). The logo is a saffron arch bridge whose deck is an open book, with a spark of knowledge above, on a navy-to-royal-blue badge. Files in `assets/`: `logo.svg` (full logo), `logo-white.svg` (for dark backgrounds), `logo-mark.svg` (icon), `favicon.svg`, plus PNG versions (`logo.png`, `logo-white.png`, `logo-512.png`, `logo-192.png`, `apple-touch-icon.png`). To show a different name, change `APP_NAME` in `js/config.js`.
+
 ## Design system
 
 Colours ("Navy & Saffron"): Navy `#0F1E3D` (sidebar, banners) · Royal blue `#2563EB` (actions, links) · Saffron `#F97316` / Amber `#F59E0B` (highlights, create buttons, AI) · Sky `#0EA5E9` (progress) · Emerald `#10B981` (success) · Rose `#E11D48` (errors) · background `#F4F7FB` with white cards. Every page opens with a navy banner and a saffron icon badge. The dashboard shows each role's numbered **workflow**: ticked steps are done, and the saffron card is the next step. The exam question palette keeps the standard colours: grey for not visited, red for not answered, green for answered, purple for marked.
@@ -279,4 +285,4 @@ It should return **3.2**. If it errors or returns an older number, paste the who
 | Anything else | Supabase SQL Editor: `select * from private.error_log order by id desc limit 20;` |
 
 ## Ran the setup on the wrong Supabase project?
-`sql/UNDO_examportal_from_wrong_database.sql` removes only what this setup added there. It starts in **preview mode** and changes nothing until you switch `v_preview` to `false`. Run `sql/UNDO_safety_check.sql` first if you're unsure. Don't run these on your real KDRT ExamSphere project.
+`sql/UNDO_examportal_from_wrong_database.sql` removes only what this setup added there. It starts in **preview mode** and changes nothing until you switch `v_preview` to `false`. Run `sql/UNDO_safety_check.sql` first if you're unsure. Don't run these on your real VidyaSetu project.

@@ -127,7 +127,7 @@ App.init().then(async (user) => {
   function flow(s) {
     const n = (v) => Number(v) || 0;
     const F = {
-      super_admin: ["Set up KDRT ExamSphere", [
+      super_admin: ["Set up VidyaSetu", [
         ["organizations.html", "Organizations", "Add colleges & institutes with their admins", n(s.organizations) > 1],
         ["users.html", "People", "Admins, faculty and student logins", n(s.faculty) > 0],
         ["syllabus.html", "Syllabus", "Exam types, subjects, units, chapters", n(s.questions) > 0],

@@ -2,8 +2,8 @@
   const C = window.APP_CONFIG || {};
   if (!window.APP_CONFIG || /YOUR-/.test((window.APP_CONFIG.SUPABASE_URL || "") + (window.APP_CONFIG.SUPABASE_ANON_KEY || "")))
     UI.error("This website isn't linked to the exam server yet. Administrator: please upload the file js/config.js (with your Supabase address and public key) to the server.", "Setup needed");
-  document.querySelectorAll(".app-name").forEach((e) => (e.textContent = C.APP_NAME || "KDRT ExamSphere"));
-  document.title = `Sign in · ${C.APP_NAME || "KDRT ExamSphere"}`;
+  if (C.APP_NAME && C.APP_NAME !== "VidyaSetu") document.querySelectorAll(".app-name").forEach((e) => (e.textContent = C.APP_NAME));
+  document.title = `Sign in · ${C.APP_NAME || "VidyaSetu"}`;
   const qs = new URLSearchParams(location.search);
   if (qs.get("expired")) UI.info("Your session has expired. Please sign in again.", "Signed out");
   if (qs.get("logout")) UI.toast("You have been signed out.");
