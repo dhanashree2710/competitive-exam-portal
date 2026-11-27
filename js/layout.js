@@ -85,7 +85,7 @@
         shell.innerHTML = `
           <aside class="app-sidebar offcanvas-lg offcanvas-start" tabindex="-1" id="sidebar">
             <div class="d-flex align-items-center justify-content-between">
-              <a class="brand" href="dashboard.html"><span class="logo logo-img"><img src="../assets/logo-mark.svg" alt="VidyaSetu logo"></span><span class="brand-text">${(C.APP_NAME || "VidyaSetu") === "VidyaSetu" ? "Vidya<span>Setu</span>" : UI.esc(C.APP_NAME)}</span></a>
+              <a class="brand" href="dashboard.html"><span class="logo logo-img"><img src="../assets/logo-mark.png" alt="VidyaSetu logo"></span><span class="brand-text">${(C.APP_NAME || "VidyaSetu") === "VidyaSetu" ? "Vidya<span>Setu</span>" : UI.esc(C.APP_NAME)}</span></a>
               <button type="button" class="side-toggle d-none d-lg-grid" id="miniBtn" title="Collapse menu" aria-label="Collapse menu"><i class="bi bi-chevron-double-left"></i></button>
               <button type="button" class="btn-close btn-close-white d-lg-none me-3" data-bs-dismiss="offcanvas" data-bs-target="#sidebar" aria-label="Close"></button>
             </div>

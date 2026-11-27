@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/logo.svg" alt="VidyaSetu – Bridge to Knowledge" width="420"></p>
+<p align="center"><img src="assets/logo.png" alt="VidyaSetu – Empowering Aspirants. Creating Achievers." width="420"></p>
 
 # VidyaSetu – Competitive Examination Portal
 
@@ -242,7 +242,7 @@ Where to find it in the portal:
 
 ## Brand
 
-**VidyaSetu** – “bridge of knowledge” (vidya = knowledge, setu = bridge). The logo is a saffron arch bridge whose deck is an open book, with a spark of knowledge above, on a navy-to-royal-blue badge. Files in `assets/`: `logo.svg` (full logo), `logo-white.svg` (for dark backgrounds), `logo-mark.svg` (icon), `favicon.svg`, plus PNG versions (`logo.png`, `logo-white.png`, `logo-512.png`, `logo-192.png`, `apple-touch-icon.png`). To show a different name, change `APP_NAME` in `js/config.js`.
+**VidyaSetu** – *Empowering Aspirants. Creating Achievers.* (vidya = knowledge, setu = bridge). The logo (supplied by the client) shows an aspirant in a graduation cap rising from an open book, reaching for a gold star along a saffron arc, with a laptop checklist for online exams and lotus petals. It is used on a white background. Files in `assets/`: `logo.png` (full logo with tagline), `logo-horizontal.png` (emblem + wordmark side by side, for headers and letterheads), `logo-emblem.png` (symbol only), `logo-mark.png` (square app icon), `favicon-32.png` / `favicon-64.png`, `logo-192.png`, `logo-512.png`, `apple-touch-icon.png`. To show a different name, change `APP_NAME` in `js/config.js`.
 
 ## Design system
 

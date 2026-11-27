@@ -1052,3 +1052,12 @@ body { background: var(--aurora), #F4F7FB !important; }
 .app-sidebar .brand .brand-text span, .splash h1 span, #appName span { color: #FDBA74; }
 .splash-logo.logo-img { width: 104px !important; height: 104px !important; filter: drop-shadow(0 16px 30px rgba(249,115,22,.40)); }
 .auth-logo.logo-img { width: 66px !important; height: 66px !important; filter: drop-shadow(0 10px 22px rgba(37,99,235,.35)); }
+
+/* ===== VidyaSetu brand v2: client logo on white ===== */
+.logo-img img { background: #fff; border-radius: 22%; padding: 2px; object-fit: contain; }
+.mark-tile { width: 42px; height: 42px; border-radius: 11px; background: #fff; padding: 2px; object-fit: contain; box-shadow: 0 6px 16px rgba(0,0,0,.25); }
+.auth-brand { background: #fff; border-radius: 16px; padding: 10px 14px; margin: 0 auto 18px; max-width: 300px; box-shadow: 0 8px 24px rgba(15,30,61,.10); border: 1px solid #EEF2F7; }
+.auth-brand img { width: 100%; height: auto; display: block; }
+.splash-brand { background: #fff; border-radius: 22px; padding: 16px 22px; width: min(360px, 84vw); margin: 0 auto 14px; box-shadow: 0 18px 40px rgba(0,0,0,.30); animation: splashPop .7s ease both; }
+.splash-brand img { width: 100%; height: auto; display: block; }
+@keyframes splashPop { from { opacity: 0; transform: translateY(10px) scale(.96); } to { opacity: 1; transform: none; } }
